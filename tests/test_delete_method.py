@@ -1,7 +1,7 @@
 import allure
 from core.rest_methods import RestMethods
 
-@allure.title('тест на удаление')
+@allure.title('запрос на удаление')
 def test_delete():
     req = "/api/users"
     response = RestMethods().delete_method(req)

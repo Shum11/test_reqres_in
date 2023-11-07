@@ -12,3 +12,5 @@ def test_patch_method():
     response = RestMethods().patch_method(req, json)
     assert response.status_code == 200
     assert "morpheus" in response.json()["name"]
+    assert "zion resident" in response.json()["job"]
+
