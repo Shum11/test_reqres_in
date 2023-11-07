@@ -1,7 +1,9 @@
 import lib_for_test
+import allure
 from core.rest_methods import RestMethods
 
 
+@allure.title('создание')
 def test_create():
     req = "/api/users"
     json = {
@@ -13,6 +15,7 @@ def test_create():
     assert "morpheus" in response.json()["name"]
 
 
+@allure.title('регистрация')
 def test_register_successfull():
     req = "/api/register"
     json = {
@@ -24,6 +27,7 @@ def test_register_successfull():
     assert response.json() in lib_for_test.post_json
 
 
+@allure.title('проверка входа')
 def test_login():
     req = "/api/login"
     json = {
@@ -35,6 +39,7 @@ def test_login():
     assert response.json() in lib_for_test.post_json
 
 
+@allure.title('проверка регистрации по одному полю')
 def test_register_unsuccessfull():
     req = "/api/register"
     json = {
@@ -45,6 +50,7 @@ def test_register_unsuccessfull():
     assert response.json() in lib_for_test.post_json
 
 
+@allure.title('проверка входа по одному полю')
 def test_login_unsuccessfull():
     req = "/api/login"
     json = {

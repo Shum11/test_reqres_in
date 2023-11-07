@@ -1,6 +1,8 @@
+import allure
 from core.rest_methods import RestMethods
 
 
+@allure.title('изменение данных')
 def test_patch_method():
     req = "/api/users/2"
     json = {
