@@ -31,8 +31,7 @@ def test_get_users_list_page_2():
 @allure.title('Негативный тест на получение списка пользователей')
 @pytest.mark.parametrize('numbers', [i for i in negative_num])
 def test_get_users_list(numbers):
-    with allure.step('проверить значение '+ str(numbers)):
-        ask = '/api/users?page=' + str(numbers)
+    ask = '/api/users?page=' + str(numbers)
     response = RestMethods().get_method(ask)
     with allure.step('Проверить статус ответа'):
         assert response.status_code == 200
