@@ -46,11 +46,7 @@ get_positive = {"/api/users?page=2": {
             "last_name": "Howell",
             "avatar": "https://reqres.in/img/faces/12-image.jpg"
         }
-    ],
-    "support": {
-        "url": "https://reqres.in/#support-heading",
-        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-    }
+    ]
 },
     "/api/users/2": {
         "data": {
@@ -59,10 +55,6 @@ get_positive = {"/api/users?page=2": {
             "first_name": "Janet",
             "last_name": "Weaver",
             "avatar": "https://reqres.in/img/faces/2-image.jpg"
-        },
-        "support": {
-            "url": "https://reqres.in/#support-heading",
-            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
         }
     },
     "/api/unknown": {
@@ -113,11 +105,7 @@ get_positive = {"/api/users?page=2": {
                 "color": "#53B0AE",
                 "pantone_value": "15-5217"
             }
-        ],
-        "support": {
-            "url": "https://reqres.in/#support-heading",
-            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-        }
+        ]
     },
     "/api/unknown/2": {
         "data": {
@@ -126,10 +114,6 @@ get_positive = {"/api/users?page=2": {
             "year": 2001,
             "color": "#C74375",
             "pantone_value": "17-2031"
-        },
-        "support": {
-            "url": "https://reqres.in/#support-heading",
-            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
         }
     },
     "/api/users?delay=3": {
@@ -180,33 +164,107 @@ get_positive = {"/api/users?page=2": {
                 "last_name": "Ramos",
                 "avatar": "https://reqres.in/img/faces/6-image.jpg"
             }
-        ],
-        "support": {
-            "url": "https://reqres.in/#support-heading",
-            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-        }
+        ]
+    }, '/api/users?page=1' : {
+        "page" : 1,
+        "per_page" : 6,
+        "total" : 12,
+        "total_pages": 2,
+        "data" : [
+            {
+                "id":1,
+                "email":"george.bluth@reqres.in",
+                "first_name":"George",
+                "last_name":"Bluth",
+                "avatar":"https://reqres.in/img/faces/1-image.jpg"
+            },{
+                "id":2,
+                "email":"janet.weaver@reqres.in",
+                "first_name":"Janet",
+                "last_name":"Weaver",
+                "avatar":"https://reqres.in/img/faces/2-image.jpg"
+            },{
+                "id":3,
+                "email":"emma.wong@reqres.in",
+                "first_name":"Emma",
+                "last_name":"Wong",
+                "avatar":"https://reqres.in/img/faces/3-image.jpg"
+            },{
+                "id":4,
+                "email":"eve.holt@reqres.in",
+                "first_name":"Eve",
+                "last_name":"Holt",
+                "avatar":"https://reqres.in/img/faces/4-image.jpg"
+            },{
+                "id":5,
+                "email":"charles.morris@reqres.in",
+                "first_name":"Charles",
+                "last_name":"Morris",
+                "avatar":"https://reqres.in/img/faces/5-image.jpg"
+            },{
+                "id":6,
+                "email":"tracey.ramos@reqres.in",
+                "first_name":"Tracey",
+                "last_name":"Ramos",
+                "avatar":"https://reqres.in/img/faces/6-image.jpg"
+            }]
     }
 
 }
 
-get_negative = {
-    "/api/user/23",
-    "/api/unknown/23"
+negative_num = [-1, 0, 15, 35]
+
+negative_str = ["name", "!@$%^", "фвы", "11242451"]
+
+json_for_patch = [
+    {
+        "name": "Morpheus",
+        "job": "zion resident"
+    },
+{
+        "name": "Michael",
+        "job": "hr"
+    },
+{
+        "name": "Lindsay",
+        "job": "admin"
+    },
+{
+        "name": "Tobias",
+        "job": "buhg"
+    },
+{
+        "name": "Byron",
+        "job": "prog"
+    },
+]
+
+
+json_for_reg = [
+    {
+        "email": "eve.holt@reqres.in"
+    },
+{
+        "password": "hr"
+    },
+{
+        "password": "admin"
+    },
+{
+        "email": "Tobias@mail.ru"
+    },
+{
+        "email": "Byron1111"
+    },
+]
+
+json_for_reg_correct = [
+{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+},
+{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
 }
-
-post_json = [
-    {
-        "id": 4,
-        "token": "QpwL5tke4Pnpja7X4"
-    },
-    {
-        "error": "Missing password"
-    },
-    {
-        "token": "QpwL5tke4Pnpja7X4"
-    },
-    {
-        "error": "Missing password"
-    }
-
 ]
