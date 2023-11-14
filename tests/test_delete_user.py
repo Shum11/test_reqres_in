@@ -10,4 +10,3 @@ def test_delete(num):
     req = '/api/users/' + str(num)
     response = RestMethods().delete_method(req)
     assert response.status_code == 204
-

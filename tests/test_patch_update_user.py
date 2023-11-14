@@ -16,4 +16,3 @@ def test_patch_method(json):
         assert json['name'] in response.json()['name']
     with allure.step('проверить изменение поля job '):
         assert json['job'] in response.json()['job']
-
