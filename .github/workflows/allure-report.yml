@@ -19,7 +19,12 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest || true
+          pytest --alluredir=allure-results --continue-on-collection-errors
+
+          if [ -z "$(ls -A allure-results)" ]; then
+            echo "ВНИМАНИЕ: Нет результатов тестов!"
+            exit 1
+          fi
 
       - name: Install Allure
         run: |
