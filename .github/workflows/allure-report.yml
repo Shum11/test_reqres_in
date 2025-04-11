@@ -18,6 +18,7 @@ jobs:
           pip install pytest allure-pytest
 
       - name: Run tests
+        continue-on-error: true
         run: |
           pytest --alluredir=allure-results --continue-on-collection-errors
 
