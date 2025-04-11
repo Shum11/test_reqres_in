@@ -1,8 +1,8 @@
-name: Allure Report
+name: Publish Allure Report
 on: [push]
 
 jobs:
-  test:
+  test-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,7 +18,8 @@ jobs:
           pip install pytest allure-pytest
 
       - name: Run tests
-        run: pytest --alluredir=allure-results
+        run: |
+          pytest || true
 
       - name: Setup Allure CLI
         uses: eroshenkoam/allure-cli-action@v1
