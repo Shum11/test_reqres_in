@@ -23,7 +23,11 @@ jobs:
 
       - name: Install Allure
         run: |
-          sudo apt-get install -y allure
+          sudo apt-get install -y curl
+          curl -o allure-2.24.1.tgz -Ls https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.24.1/allure-commandline-2.24.1.tgz
+          tar -zxvf allure-2.24.1.tgz
+          sudo mv allure-2.24.1 /opt/allure
+          echo "/opt/allure/bin" >> $GITHUB_PATH
           allure --version
 
       - name: Generate Allure Report
