@@ -21,6 +21,12 @@ jobs:
         run: |
           pytest || true
 
+      - name: Install Allure
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y allure
+          allure --version
+
       - name: Generate Allure Report
         run: |
           allure generate allure-results -o allure-report --clean
